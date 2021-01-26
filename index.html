@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event date and time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="res/css/bootstrap.min.css">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="res/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Event date and time</h3>
+                </div>
+                <div class="card-body">
+                    <div class="input-group form-group">
+                        <input type="text" class="form-control" id="eventName" required placeholder="Event Name">
+                    </div>
+                    <div class="input-group form-group">
+                        <input type="datetime-local" class="form-control" id="eventDateTime" name="eventDateTime">
+                    </div>
+                    <div class="form-group">
+                        <button id="submit" class="btn count-down-btn"> Count Down Date Time </button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p id="viewCountDownDateTime"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="res/js/scriptExport.js" type="module"></script>
+    <script src="res/js/scriptImport.js" type="module"></script>
+</body>
+</html>
