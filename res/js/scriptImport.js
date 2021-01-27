@@ -7,7 +7,7 @@ document.getElementById("submit").onclick = () => {
     document.getElementById("eventDateTime").value.trim() == ""
   ) {
     document.getElementById("viewCountDownDateTime").innerHTML =
-      "please fill out all input field";
+      "Please fill out all input field";
     document.getElementById(
       "viewCountDownDateTime"
     ).parentElement.style.background = "red";
