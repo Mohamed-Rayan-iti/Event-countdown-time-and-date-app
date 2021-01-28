@@ -100,9 +100,11 @@ export function createEvent(EventTitle, EventDatetime, EventList) {
       EventTitle.value = "";
       EventDatetime.value = "";
     } else {
-      alert(
-        `Event "${title.textContent}" already exist, change the event name`
-      );
+      Swal.fire({
+        icon: "warning",
+        title: "Exist event",
+        text: `Event ${title.textContent} already exist, please change the event title`,
+      });
     }
   }
 }
