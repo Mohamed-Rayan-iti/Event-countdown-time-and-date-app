@@ -10,10 +10,9 @@ height: 100%;
 align-content: center;
 }
 .card{
-height: 370px;
 margin-top: auto;
 margin-bottom: auto;
-width: 450px;
+width: 650px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 .card-header h3{
@@ -25,16 +24,20 @@ box-shadow: 0 0 0 0 !important;
 }
 .count-down-btn{
 color: black;
-background-color: #FFC312;
+background-color: #17a2b8;
 width: 100%;
 }
 .count-down-btn:hover{
 color: black;
 background-color: white;
 }
-.card-footer{
-    color: #fff;
-    text-align: center;
-    font-size: larger;
-    font-weight: 400;
+
+.eventItemDateTime{
+    background-color: white;
+    padding: .375rem .75rem;
+    border: 2px solid #17a2b8;
+    border-radius: .25rem;
+}
+.event-title{
+    padding: .375rem 0rem;
 }

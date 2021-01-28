@@ -1,23 +1,17 @@
-import * as importModule from "./scriptExport.js";
+import * as all  from "./scriptExport.js";
 
-document.getElementById("submit").onclick = () => {
-  console.log(document.getElementById("eventDateTime").value);
-  if (
-    document.getElementById("eventName").value.trim() == "" ||
-    document.getElementById("eventDateTime").value.trim() == ""
-  ) {
-    document.getElementById("viewCountDownDateTime").innerHTML =
-      "Please fill out all input field";
-    document.getElementById(
-      "viewCountDownDateTime"
-    ).parentElement.style.background = "red";
-  } else {
-    importModule.eventCountDownDateTime(
-      new Date(document.getElementById("eventDateTime").value).getTime(),
-      document.getElementById("eventName").value
-    );
-    document
-      .getElementById("viewCountDownDateTime")
-      .parentElement.removeAttribute("style");
-  }
+const eventTitle = document.getElementById("eventTitle"),
+  eventDatetime = document.getElementById("eventDateTime"),
+  addButton = document.getElementById("submit"),
+  eventList = document.getElementById("eventList");
+
+addButton.onclick = (_) => {
+  all.createEvent(eventTitle, eventDatetime, eventList);
 };
+
+document.addEventListener("click", function (e) {
+  // Event Item Delete 
+  if (e.target.classList.contains("btn-danger")) {
+    e.target.parentNode.remove();
+  }
+});
