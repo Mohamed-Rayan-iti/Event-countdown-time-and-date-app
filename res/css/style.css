@@ -33,7 +33,7 @@ background-color: white;
 }
 
 .eventItemDateTime{
-    background-color: white;
+    color: white;
     padding: .375rem .75rem;
     border: 2px solid #17a2b8;
     border-radius: .25rem;

@@ -54,32 +54,21 @@ export function createEvent(EventTitle, EventDatetime, EventList) {
 
       const { eventTitle, days, hours, minutes, seconds } = eventObj;
 
-      eventDateTimeElement.innerHTML = `
-        ${days < 10 ? `0` + days : days} 
-        <span> Days</span> 
-        ${hours < 10 ? `0` + hours : hours} 
-         <span> Hours</span> 
-        ${minutes < 10 ? `0` + minutes : minutes} 
-         <span> Minutes</span> 
-        ${seconds < 10 ? `0` + seconds : seconds} 
-         <span> Seconds</span>`;
-
       if (distance < 0) {
         clearInterval(x);
-        eventDateTimeElement.innerHTML = `
-        00 
-        <span> Days</span> 
-        00 
-         <span> Hours</span> 
-        00
-         <span> Minutes</span> 
-        00 
-         <span> Seconds</span>`;
          Swal.fire({
           icon: "success",
           title: "Event starting",
           text: `The event ${eventTitle} is beginning right now`,
         });
+      }
+      else{ 
+      eventDateTimeElement.innerHTML = `
+      ${days} Days 
+      ${hours} Hours 
+      ${minutes} Minute 
+      ${seconds} Second`;
+
       }
     }, 1000);
 
